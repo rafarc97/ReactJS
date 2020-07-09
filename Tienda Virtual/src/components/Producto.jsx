@@ -1,7 +1,8 @@
 import React from 'react'
+
 const Producto = ({productos, producto, carrito, agregarProducto}) => {
     
-    const { nombre, precio, id } = producto;
+    const { id, nombre, precio } = producto;
 
     //Agregar producto al carrito
     const seleccionarProducto = id => {

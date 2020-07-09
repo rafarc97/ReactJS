@@ -69,7 +69,7 @@ function App() {
   //Crear listado de productos
   //Cada productos va a ser un objeto
   /* productos será el nombre de con lo que vayamos a tratar
-  y setProductos el nombre de la función que indica la acción
+  y guardarProductos el nombre de la función que indica la acción
   que realizará. Luego los productos (datos) se pasarán como
   un array de objetos */
   /* Este es nuestro primer STATE */
@@ -80,23 +80,45 @@ function App() {
     { id: 4, nombre: 'Camisa AngularJS', precio: 20 }
   ]);
 
-  /* STATE para carrito de compras */
+  /* Este es nuestro 2º STATE para carrito de compras */
+  /* Le asignamos a carrito un vector vacío */
   const [ carrito, agregarProducto ] = useState([]);
-
 
   //Obtener la fecha
   const fecha = new Date().getFullYear();
+
+
+
+
   return (
     <Fragment>
+
+
+
+
+
+      {/* HEADER */}
       <Header 
       /* Estos datos se pasan al componente Header
       a través de la variable props */
         titulo = 'Tienda Virtual'
       />
 
+
+
+
+
       <h1>Lista de productos</h1>
+
       {/* Las llaves las usamos cuando queremos añadir dentro
       de los componentes código JS */}
+
+
+
+
+
+
+      {/* PRODUCTO */}
       {productos.map(producto => (
         <Producto 
 
@@ -112,14 +134,28 @@ function App() {
         />
       ) )}
 
+
+
+
+
+      {/* CARRITO */}
       <Carrito 
         carrito = {carrito}
         agregarProducto = {agregarProducto}
       />
 
+
+
+
+
+        {/* FOOTER */}
       <Footer 
         fecha = {fecha}
       />
+
+
+
+
     </Fragment>
   );
 }

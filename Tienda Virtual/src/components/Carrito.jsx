@@ -10,7 +10,7 @@ const Carrito = ({carrito, agregarProducto}) => (
             : carrito.map(producto => (
 
                 /* En React se suelen pasar los datos de los
-                componentes padres a hijos (app a Carrito por ejemplo),
+                componentes padres a hijos (App a Carrito por ejemplo),
                 pero también se pueden pasar de componentes hijos a
                 otros hijos como en este caso, le estamos pasando estos
                 datos del componente Carrito al componente Producto */
